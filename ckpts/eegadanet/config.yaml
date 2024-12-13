@@ -1,0 +1,22 @@
+data:
+  sample_rate: 200
+  chunk_size: 512
+  noise_type: EOG
+  noise_scale: 5
+  delta_snr: [-5, 5]
+model:
+  kernel_size: 3
+  scale: 2
+  num_blocks: [1,1,1,2,2,4]
+  num_channels: 16
+  norm: BatchNorm
+  activation: gelu
+  att_dim: 128
+  att_heads: 8
+  att_drop: 0.1
+  emb_freqs: 4
+training:
+  batch_size: 32
+  cv_seed: 0
+  cv_splits: 3
+  lr: 0.0002

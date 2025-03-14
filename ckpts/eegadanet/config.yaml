@@ -20,3 +20,7 @@ training:
   cv_seed: 0
   cv_splits: 3
   lr: 0.0002
+  early_stop:
+    patience: 100
+    tolerance: 0.0001
+    
